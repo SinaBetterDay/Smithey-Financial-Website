@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculators - Ronnie Smithey Financial Group</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="newsletters.html">Newsletters</a></li>
+            <li><a href="calculators.html">Calculators</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Calculators Section -->
+    <section class="calculator-section">
+        <h2>Financial Calculators</h2>
+
+         <!-- Mortgage Calculator -->
+         <div class="calculator">
+            <h3>Mortgage Calculator</h3>
+            <label for="principal">Loan Amount ($):</label>
+            <input type="number" id="principal" min="0" placeholder="Enter loan amount">
+
+            <label for="interest">Interest Rate (%):</label>
+            <input type="number" id="interest" min="0" placeholder="Enter interest rate">
+
+            <label for="term">Loan Term (Years):</label>
+            <input type="number" id="term" min="0" placeholder="Enter loan term">
+
+            <button onclick="calculateMortgage()">Calculate</button>
+            <p id="mortgage-result"></p>
+        </div>
+
+        <!-- Loan Payment Calculator -->
+        <div class="calculator">
+            <h3>Loan Payment Calculator</h3>
+            <label for="loan-amount">Loan Amount ($):</label>
+            <input type="number" id="loan-amount" min="0" placeholder="Enter loan amount">
+
+            <label for="loan-rate">Interest Rate (%):</label>
+            <input type="number" id="loan-rate" min="0" placeholder="Enter interest rate">
+
+            <label for="loan-term">Loan Term (Months):</label>
+            <input type="number" id="loan-term" min="0" placeholder="Enter loan term">
+
+            <button onclick="calculateLoan()">Calculate</button>
+            <p id="loan-result"></p>
+        </div>
+
+        <!-- Compound Interest Calculator -->
+        <div class="calculator">
+            <h3>Compound Interest Calculator</h3>
+            <label for="compound-principal">Principal Amount ($):</label>
+            <input type="number" id="compound-principal" min="0" placeholder="Enter principal amount">
+
+            <label for="compound-rate">Annual Interest Rate (%):</label>
+            <input type="number" id="compound-rate" min="0" placeholder="Enter interest rate">
+
+            <label for="compound-years">Number of Years:</label>
+            <input type="number" id="compound-years" min="0" placeholder="Enter number of years">
+
+            <button onclick="calculateCompound()">Calculate</button>
+            <p id="compound-result"></p>
+        </div>
+    </section>
+
+    <!-- JavaScript for Calculators -->
+    <script src="scripts/calculators.js"></script>
+</body>
+</html>
