@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estate Tax Calculator - Ronnie Smithey Financial Group</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../calculators.html">Calculators</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="calculator-page">
+        <div class="calculator-container">
+            <h1>Estate Tax Calculator</h1>
+            <p>Estimate federal estate taxes due on your estate</p>
+            
+            <div class="calculator-inputs">
+                <label for="estate-value">Total Estate Value ($):</label>
+                <input type="number" id="estate-value" min="0">
+                
+                <label for="exemption">Federal Exemption ($):</label>
+                <input type="number" id="exemption" value="12920000">
+                
+                <button onclick="calculateEstateTax()">Calculate</button>
+            </div>
+
+            <div class="calculator-results">
+                <h3>Results</h3>
+                <p>Taxable Estate: <span id="taxable-estate">$0.00</span></p>
+                <p>Estimated Tax Due: <span id="tax-due">$0.00</span></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../scripts/calculators/estate-taxes.js"></script>
+</body>
+</html>

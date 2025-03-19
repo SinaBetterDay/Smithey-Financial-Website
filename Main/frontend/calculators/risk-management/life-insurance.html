@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance Calculator - Ronnie Smithey Financial Group</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../calculators.html">Calculators</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="calculator-page">
+        <div class="calculator-container">
+            <h1>Life Insurance Calculator</h1>
+            <p>Estimate your family's life insurance needs</p>
+            
+            <div class="calculator-inputs">
+                <label for="income">Annual Income ($):</label>
+                <input type="number" id="income" min="0">
+                
+                <label for="years">Income Replacement Years:</label>
+                <input type="number" id="years" min="0">
+                
+                <label for="debts">Outstanding Debts ($):</label>
+                <input type="number" id="debts" min="0">
+                
+                <button onclick="calculateInsurance()">Calculate</button>
+            </div>
+
+            <div class="calculator-results">
+                <h3>Recommended Coverage</h3>
+                <p>Total Coverage Needed: <span id="coverage">$0.00</span></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../scripts/calculators/life-insurance.js"></script>
+</body>
+</html>

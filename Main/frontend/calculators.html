@@ -7,70 +7,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="newsletters.html">Newsletters</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../newsletters.html">Newsletters</a></li>
             <li><a href="calculators.html">Calculators</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Calculators Section -->
-    <section class="calculator-section">
-        <h2>Financial Calculators</h2>
-
-         <!-- Mortgage Calculator -->
-         <div class="calculator">
-            <h3>Mortgage Calculator</h3>
-            <label for="principal">Loan Amount ($):</label>
-            <input type="number" id="principal" min="0" placeholder="Enter loan amount">
-
-            <label for="interest">Interest Rate (%):</label>
-            <input type="number" id="interest" min="0" placeholder="Enter interest rate">
-
-            <label for="term">Loan Term (Years):</label>
-            <input type="number" id="term" min="0" placeholder="Enter loan term">
-
-            <button onclick="calculateMortgage()">Calculate</button>
-            <p id="mortgage-result"></p>
+    <section class="calculator-directory">
+        <h1>Financial Calculators</h1>
+        
+        <div class="calculator-description">
+            <p>How much retirement income will you need? How much life insurance is enough? What type of IRA is right for you?</p>
+            <p>Our financial calculators are designed as educational tools to help you estimate answers to common financial questions...</p>
+            <p class="disclaimer">These calculators are hypothetical examples used for illustrative purposes...</p>
         </div>
 
-        <!-- Loan Payment Calculator -->
-        <div class="calculator">
-            <h3>Loan Payment Calculator</h3>
-            <label for="loan-amount">Loan Amount ($):</label>
-            <input type="number" id="loan-amount" min="0" placeholder="Enter loan amount">
-
-            <label for="loan-rate">Interest Rate (%):</label>
-            <input type="number" id="loan-rate" min="0" placeholder="Enter interest rate">
-
-            <label for="loan-term">Loan Term (Months):</label>
-            <input type="number" id="loan-term" min="0" placeholder="Enter loan term">
-
-            <button onclick="calculateLoan()">Calculate</button>
-            <p id="loan-result"></p>
+        <!-- Loans & Credit Cards -->
+        <div class="calculator-category">
+            <h2>Loans & Credit Cards</h2>
+            <ul>
+                <li><a href="calculators/loans-credit/loan-payoff.html">Loan Payoff Calculator</a> - How much will it cost to pay off a loan?</li>
+                <li><a href="calculators/loans-credit/home-affordability.html">Home Affordability Calculator</a> - Estimate maximum mortgage amount</li>
+                <!-- Add other loan calculators -->
+            </ul>
         </div>
 
-        <!-- Compound Interest Calculator -->
-        <div class="calculator">
-            <h3>Compound Interest Calculator</h3>
-            <label for="compound-principal">Principal Amount ($):</label>
-            <input type="number" id="compound-principal" min="0" placeholder="Enter principal amount">
-
-            <label for="compound-rate">Annual Interest Rate (%):</label>
-            <input type="number" id="compound-rate" min="0" placeholder="Enter interest rate">
-
-            <label for="compound-years">Number of Years:</label>
-            <input type="number" id="compound-years" min="0" placeholder="Enter number of years">
-
-            <button onclick="calculateCompound()">Calculate</button>
-            <p id="compound-result"></p>
+        <!-- Estate Planning -->
+        <div class="calculator-category">
+            <h2>Estate Planning</h2>
+            <ul>
+                <li><a href="calculators/estate-planning/estate-taxes.html">Estate Tax Calculator</a> - Estimate federal estate taxes</li>
+                <!-- Add other estate calculators -->
+            </ul>
         </div>
+
+        <!-- In Estate Planning -->
+        <div class="calculator-category">
+            <h2>Estate Planning</h2>
+            <ul>
+                <li><a href="calculators/estate-planning/estate-taxes.html">Estate Taxes</a></li>
+            </ul>
+        </div>        
+        
+        <!-- In Taxes & IRAs -->
+        </div class="calculator-category">
+            <h2>roth-conversion</h2>
+            <ul>
+                <li><a href="calculators/taxes-iras/roth-conversion.html">Roth IRA Conversion</a></li>
+            </ul>
+        </div>
+      
+        <!-- In Risk Management -->
+        <div class="calculator-category">
+            <h2>Life Insurance</h2>
+            <ul>
+                <li><a href="calculators/risk-management/life-insurance.html">Life Insurance Needs</a></li>
+            </ul>   
+        </div>
+        
+        <!-- Add other categories similarly -->
+
     </section>
-
-    <!-- JavaScript for Calculators -->
-    <script src="scripts/calculators.js"></script>
 </body>
 </html>
