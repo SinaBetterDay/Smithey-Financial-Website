@@ -228,6 +228,31 @@ nav a:hover {
     line-height: 1.8;
 }
 
+/* Disclaimer Styles */
+.disclaimer {
+    padding: 1.5rem 2rem;
+    background: rgba(236, 240, 241, 0.9);
+    border-top: 2px solid var(--accent-color);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.disclaimer p {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .disclaimer {
+        padding: 1rem;
+        font-size: 0.7rem;
+    }
+}
+
 /* Newsletter Page */
 section {
     padding: 20px;
