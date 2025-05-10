@@ -24,32 +24,15 @@
 
 /* Body Styles */
 body {
-    line-height: 1.6;
-    color: var(--heading-color);
-    background: var(--background-color);
-}
-
-/* Home Page Background */
-#home {
-    background-image: url('images/homepagebackground.jpg');
+    background: url("images/losangeles.jpeg") no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
+    backdrop-filter: blur(4px); /* adds that nice blurry layer */
+    -webkit-backdrop-filter: blur(4px); /* for Safari */
+    color: #fff; /* optional: keep text readable */
+    margin: 0;
+    padding-top: 80px;
 }
 
-/* Add dark overlay */
-#home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Adjust opacity (0.3) for darkness */
-}
 
 /* Fade in Effect on Homepage */
 .page-transition {
@@ -69,35 +52,7 @@ body {
     }
 }
 
-/* Hero Section Improvements */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-}
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--white);
-}
-
-.hero p {
-    font-size: 1.4rem;
-    margin-bottom: 2.5rem;
-    color: rgba(255, 255, 255, 0.9);
-}
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
@@ -105,11 +60,11 @@ body {
         padding: 2rem;
         margin: 0 1rem;
     }
-    
+
     .hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero p {
         font-size: 1.1rem;
     }
@@ -160,7 +115,7 @@ nav a:hover {
     .nav-brand {
         display: none; /* Hide on mobile if needed */
     }
-    
+
     nav ul {
         width: 100%;
         justify-content: center;
@@ -169,20 +124,19 @@ nav a:hover {
 
 /* Hero Section (Homepage) */
 .hero {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-    background: rgb(114, 98, 91);
+    text-align: left;
+    padding: 5rem 2rem;
+    background: var(--background-color)
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--heading-color);
 }
 
 .hero p {
@@ -211,7 +165,7 @@ nav a:hover {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    background: var(--white);
+    background: var(--background-color);
     box-shadow: 0 2px 10px var(--shadow-color);
     border-radius: 10px;
 }
@@ -256,7 +210,7 @@ nav a:hover {
 /* Newsletter Page */
 section {
     padding: 20px;
-    background-color: var(--light-background);
+    background-color: var(--background-color);
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 8px;
@@ -269,13 +223,13 @@ section {
 .newsletter-section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--heading-color);
+    color: var(--text-color);
 }
 
 .uploaded-pdfs h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: var(--subheading-color);
+    color: var(--text-color);
 }
 
 .uploaded-pdfs ul {
@@ -289,7 +243,7 @@ section {
 
 .uploaded-pdfs ul li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 1.1em;
 }
 
@@ -408,11 +362,39 @@ section {
     background: var(--secondary-color);
 }
 
+.map-wrapper {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    max-width: 1160px;
+    margin: 3rem auto 3rem auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+
+  .map-wrapper h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .map-container {
+    width: 100%;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 2px;
+    display: block;
+  }
+
 /* Calculator Directory Styles */
 .calculator-category {
-    margin-bottom: 3rem; 
-    padding: 2.5rem;   
-    border-top: 3px solid var(--primary-color); 
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    border-top: 3px solid var(--primary-color);
 }
 
 /* Responsive spacing */
@@ -421,7 +403,7 @@ section {
         margin-bottom: 2rem;
         padding: 1.5rem;
     }
-    
+
     .calculator-directory {
         padding-top: 2rem;
     }
@@ -451,7 +433,7 @@ section {
 .calculator-category h2 {
     color: var(--primary-color);
     border-bottom: 2px solid var(--accent-color);
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
     padding-bottom: 1rem;
 }
 
@@ -464,7 +446,7 @@ section {
     position: relative;
     padding-left: 20px;
     padding: 0.8rem 0;
-    line-height: 1.7; 
+    line-height: 1.7;
 }
 
 .calculator-category li::before {
@@ -504,6 +486,103 @@ section {
 .calculator-category a:hover::after {
     width: 100%;
 }
+
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    bottom: 2;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.privacypolicy-link {
+    text-decoration: none; /* Removes default underline */
+    color: #0000EE; /* Blue color for the link */
+}
+
+.privacypolicy-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: blue;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+
+.social-icons img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+}
+
+/* Privacy Policy Page */
+.privacypolicy {
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    text-align: center; /* Ensures the text is centered horizontally */
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    border-radius: 10px;
+}
+
+.privacypolicy h1 {
+    font-size: 3rem; /* Larger font size for the title */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--heading-color); /* You can replace with any color or variable */
+    text-transform: uppercase; /* Makes the title all uppercase */
+    letter-spacing: 2px; /* Slight letter spacing for readability */
+}
+
+.privacypolicy h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.privacypolicy p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.privacypolicy ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.privacypolicy ul li {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
