@@ -1,4 +1,4 @@
-/* General Styles */
+/* 🎨 GENERAL STYLES - Base Reset and Variables */
 * {
     margin: 0;
     padding: 0;
@@ -7,34 +7,43 @@
 }
 
 :root {
-    --primary-color: #2980b9;   /* Bright blue */
-    --secondary-color: #3498db; /* Lighter blue */
-    --accent-color: #f39c12;    /* Golden yellow */
-    --background-color: #ecf0f1; /* Light grayish background */
-    --heading-color: #2c3e50;   /* Dark grayish blue for text */
-    --text-color: #7f8c8d;      /* Light gray for body text */
-    --link-color: #0066cc;      /* Blue for links */
-    --hover-link-color: #003366; /* Darker blue for link hover */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    --white: #ffffff;           /* Pure white */
-    --black: #000000;           /* Pure black */
-    --success-color: #2ecc71;   /* Green for success messages */
-    --error-color: #e74c3c;     /* Red for error messages */
+    --primary-color: #2980b9;
+    --secondary-color: #3498db;
+    --accent-color: #f39c12;
+    --background-color: #ecf0f1;
+    --heading-color: #2c3e50;
+    --text-color: #7f8c8d;
+    --link-color: #0066cc;
+    --hover-link-color: #003366;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --white: #ffffff;
+    --black: #000000;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
 }
 
-/* Body Styles */
+/* 🖼️ BODY STYLES - Background and Layout Base */
 body {
     background: url("images/losangeles.jpeg") no-repeat center center fixed;
     background-size: cover;
-    backdrop-filter: blur(4px); /* adds that nice blurry layer */
-    -webkit-backdrop-filter: blur(4px); /* for Safari */
-    color: #fff; /* optional: keep text readable */
+    background-position: center;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #fff;
     margin: 0;
     padding-top: 80px;
 }
 
+.section-container {
+  padding: 20px;
+  background-color: var(--background-color);
+  margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  max-width: 1200px;
+}
 
-/* Fade in Effect on Homepage */
+/* ✨ ANIMATIONS - Entry Transitions */
 .page-transition {
     opacity: 0;
     transform: translateY(20px);
@@ -52,25 +61,7 @@ body {
     }
 }
 
-
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 2rem;
-        margin: 0 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-}
-
-/* Navigation Bar */
+/* 🧭 NAVIGATION - Main Nav Styles */
 nav {
     display: flex;
     align-items: center;
@@ -78,16 +69,24 @@ nav {
     top: 0;
     width: 100%;
     background: var(--white);
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 2px 5px var(--shadow-color);
-    z-index: 1000;
+}
+
+.nav-logo {
+  height: 40px;        /* Bigger image */
+  width: auto;
+  transform: translateY(-10px); /* shift it up so it "floats" */
 }
 
 .nav-brand {
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--heading-color);
-    margin-right: auto; /* Pushes links to the right */
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    margin-right: auto;
     padding: 0 2rem;
 }
 
@@ -110,78 +109,221 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
     .nav-brand {
-        display: none; /* Hide on mobile if needed */
+        display: none;
     }
-
     nav ul {
         width: 100%;
         justify-content: center;
     }
 }
 
-/* Hero Section (Homepage) */
+/* 🦸 HERO SECTION - Landing Area */
 .hero {
+    color: white;
+    padding: 6rem 2rem; /* more flexible spacing */
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    text-align: left;
-    padding: 5rem 2rem;
-    background: var(--background-color)
+    text-align: center;
+    position: relative;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--heading-color);
+
+
+.hero-logo {
+  border-radius: 20px; /* adjust px for more or less curve */
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
 }
 
-.hero p {
-    font-size: 1.2rem;
+.tagline {
+    font-size: 1.25rem;
+    color: var(--accent-color);
     margin-bottom: 2rem;
-    color: #b4b4b4;
+    font-weight: 600;
 }
 
+.contact-box {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    color: #fff;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-box p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    color:#000
+}
+
+.contact-box a {
+    color: #3f51b5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
 .cta-button {
-    padding: 1rem 2rem;
-    background: var(--primary-color);
-    color: var(--white);
+    margin-top: 2rem;
+    background: var(--accent-color);
+    color: #000;
+    padding: 0.9rem 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .cta-button:hover {
-    background: var(--secondary-color);
+    background: #f1c40f;
+    transform: scale(1.05);
 }
 
-/* About Us Section */
+
+/* 👤 ABOUT US SECTION - Bio and Intro */
 .about-us {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: var(--background-color);
-    box-shadow: 0 2px 10px var(--shadow-color);
-    border-radius: 10px;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px var(--shadow-color);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.about-us:hover {
+    transform: translateY(-5px);
 }
 
 .about-us h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--heading-color);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.about-us h3 {
+    margin-top: 2rem;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.4rem;
 }
 
 .about-us p {
-    font-size: 1rem;
     color: var(--text-color);
+    font-size: 1.1rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
+.about-us strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.bullet-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bullet-list li {
+    line-height: 1.7;
+    color: var(--text-color);
+}
+.carousel-container {
+  max-width: 1200px;
+  width: 100%;
+  transform: scale(0.9);
+  transform-origin: center;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: var(--white);
+  box-shadow: 0 4px 20px var(--shadow-color);
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-container h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.office-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * 5 / 3); /* If you have 5 images, shows 3 at a time */
+}
+
+.carousel-track img {
+  height: 300px; /* reduce height to emphasize width */
+  aspect-ratio: auto; /* let width adjust naturally */
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  border-radius: 6px;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-track img {
+    height: 300px;
+  }
+
+  .carousel-container h3 {
+    font-size: 1.4rem;
+  }
+}
 /* Disclaimer Styles */
 .disclaimer {
     padding: 1.5rem 2rem;
@@ -207,50 +349,6 @@ nav a:hover {
     }
 }
 
-/* Newsletter Page */
-section {
-    padding: 20px;
-    background-color: var(--background-color);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px var(--shadow-color);
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.newsletter-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.uploaded-pdfs h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-.uploaded-pdfs ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.uploaded-pdfs ul li {
-    margin-bottom: 10px;
-}
-
-.uploaded-pdfs ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.1em;
-}
-
-.uploaded-pdfs ul li a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
 
 /* Calculators Page */
 .calculator-section {
@@ -607,4 +705,73 @@ section {
     .contact-page {
         padding: 2rem 1rem;
     }
+}
+
+
+/* ✨ Redesign Enhancements */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--heading-color);
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: var(--white);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+a.button-link,
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+a.button-link:hover,
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.03);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+footer, .footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 5px solid var(--accent-color);
 }

@@ -1,65 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Calculators - Ronnie Smithey Financial Group</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Calculators | Ronnie Smithey Financial Group</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <nav>
-        <a href="/Main/frontend/index.html" class="nav-brand">Ronnie Smithey Financial</a>
-        <ul>
-            <li><a href="/Main/frontend/index.html">Home</a></li>
-            <li><a href="/Main/frontend/newsletters.html">Newsletters</a></li>
-            <li><a href="/Main/frontend/calculators.html">Calculators</a></li>
-            <li><a href="/Main/frontend/contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <a href="/Main/frontend/index.html" class="nav-brand">
+      <img src="images/logo1nav.png" alt="Ronnie Smithey Financial Logo" class="nav-logo">
+    </a>
+      <li><a href="/Main/frontend/index.html">Home</a></li>
+      <li><a href="/Main/frontend/about.html">About Us</a></li>
+      <li><a href="/Main/frontend/calculators.html" class="active">Calculators</a></li>
+      <li><a href="/Main/frontend/contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="calculator-directory">
-        <h1>Financial Calculators</h1>
-      
-        <!-- Wrap everything in one .calculator box -->
-        <div class="calculator">
-          <div class="calculator-description">
-            <p>How much retirement income will you need? How much life insurance is enough? What type of IRA is right for you?</p>
-            <p>Our financial calculators are designed as educational tools to help you estimate answers to common financial questions...</p>
-            <p class="disclaimer">These calculators are hypothetical examples used for illustrative purposes...</p>
-          </div>
-      
-          <!-- Loans & Credit Cards -->
-          <div class="calculator-category">
-            <h2>Loans & Credit Cards</h2>
-            <ul>
-              <li><a href="calculators/loans-credit/loan-payoff.html">Loan Payoff Calculator</a> - How much will it cost to pay off a loan?</li>
-            </ul>
-          </div>
-      
-          <!-- Estate Planning -->
-          <div class="calculator-category">
-            <h2>Estate Planning</h2>
-            <ul>
-              <li><a href="calculators/estate-planning/estate-taxes.html">Estate Tax Calculator</a> - Estimate federal estate taxes</li>
-            </ul>
-          </div>
-      
-          <!-- Taxes & IRAs -->
-          <div class="calculator-category">
-            <h2>Taxes & IRAs</h2>
-            <ul>
-              <li><a href="calculators/taxes-iras/roth-conversion.html">Roth IRA Conversion</a></li>
-            </ul>
-          </div>
-      
-          <!-- Risk Management -->
-          <div class="calculator-category">
-            <h2>Risk Management</h2>
-            <ul>
-              <li><a href="calculators/risk-management/life-insurance.html">Life Insurance Needs</a></li>
-            </ul>
-          </div>
+  <section class="section-container">
+    <main class="calculator-directory">
+      <h1>Financial Calculators</h1>
+
+      <div class="calculator card">
+        <div class="calculator-description">
+          <p>How much retirement income will you need? How much life insurance is enough? What type of IRA is right for you?</p>
+          <p>Our financial calculators are designed to help you estimate answers to common questions and explore your financial options.</p>
+          <p class="disclaimer">Note: These calculators are provided for informational purposes only and should not be considered financial advice.</p>
         </div>
-      </section>
+
+        <div class="calculator-category">
+          <h2>Loans & Credit Cards</h2>
+          <ul>
+            <li>
+              <a href="calculators/loans-credit/loan-payoff.html">Loan Payoff Calculator</a> – Estimate your payoff schedule and total interest.
+            </li>
+          </ul>
+        </div>
+
+        <div class="calculator-category">
+          <h2>Estate Planning</h2>
+          <ul>
+            <li>
+              <a href="calculators/estate-planning/estate-taxes.html">Estate Tax Calculator</a> – Estimate potential federal estate taxes.
+            </li>
+          </ul>
+        </div>
+
+        <div class="calculator-category">
+          <h2>Taxes & IRAs</h2>
+          <ul>
+            <li>
+              <a href="calculators/taxes-iras/roth-conversion.html">Roth IRA Conversion Calculator</a> – Explore the benefits of converting to a Roth IRA.
+            </li>
+          </ul>
+        </div>
+
+        <div class="calculator-category">
+          <h2>Risk Management</h2>
+          <ul>
+            <li>
+              <a href="calculators/risk-management/life-insurance.html">Life Insurance Needs</a> – Estimate how much coverage your family may need.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Ronnie Smithey Financial Group. All rights reserved.</p>
+  </footer>
 </body>
 </html>

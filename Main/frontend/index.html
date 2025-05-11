@@ -11,47 +11,53 @@
 <body class = "page-transition">
     <!-- Navigation -->
     <nav>
-        <a href="/Main/frontend/index.html" class="nav-brand">Ronnie Smithey Financial</a>
+        <a href="/Main/frontend/index.html" class="nav-brand">
+            <img src="images/logo1nav.png" alt="Ronnie Smithey Financial Logo" class="nav-logo">
+        </a>
         <ul>
             <li><a href="/Main/frontend/index.html">Home</a></li>
-            <li><a href="/Main/frontend/newsletters.html">Newsletters</a></li>
+            <li><a href="/Main/frontend/about.html">About Us</a></li>
             <li><a href="/Main/frontend/calculators.html">Calculators</a></li>
             <li><a href="/Main/frontend/contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Home Page -->
+<!-- Home Page -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Ronnie Smithey Financial Group</h1>
-            <p><i>Your Trusted Financial Partner</i></p>
-            <button class="cta-button" onclick="location.href='contact.html'">Contact Us</button>
+        <!-- Logo Image as Title -->
+        <img src="images/logo1.png" alt="Ronnie Smithey Financial Group" class="hero-logo" />
+
+        <p class="tagline"><i>Your Trusted Financial Partner</i></p>
+        
+        <div class="contact-box">
+            <p><strong>Address:</strong><br>5101 East La Palma Avenue, Suite #202-D<br>Anaheim Hills, CA 92807</p>
+            <p><strong>Phone:</strong> <a href="tel:+17142029858">(714) 202-9858</a></p>
+            <p><strong>Fax:</strong> (714) 464-3416</p>
+            <p><strong>Email:</strong> <a href="mailto:ron.smithey@lpl.com">ron.smithey@lpl.com</a></p>
+        </div>
+    
+        <button class="cta-button" onclick="location.href='contact.html'">Contact Us</button>
         </div>
     </section>
 
-    <!-- About Us -->
-    <section class="about-us">
-        <h2>About Us</h2>
-        <p>We are a dedicated team of financial experts committed to helping you achieve your financial goals...</p>
-    </section>
+        <!-- Disclaimer Section -->
+        <div class="disclaimer">
 
-    <!-- Disclaimer Section -->
-    <div class="disclaimer">
-
-    <p>
-        <a href="lpl-financial-relationship-summary.pdf" target="_blank" rel="noopener noreferrer">
-        LPL Financial Form CRS
-        </a>
-    </p>
+        <p>
+            <a href="lpl-financial-relationship-summary.pdf" target="_blank" rel="noopener noreferrer">
+            LPL Financial Form CRS
+            </a>
+        </p>
 
 
-    <p>Ronnie Smithey Financial Group is registered to conduct business in all 50 United States. 
-    While we are authorized to provide services nationwide, specific products and strategies may 
-    not be available in all jurisdictions. Not all services are suitable for every investor, 
-    and availability may be subject to state-specific regulations and requirements.</p>
-    <br>
-    <p>Review our <a href="privacypolicy.html" target="_blank" class="privacypolicy-link">Privacy Policy</a></p>
-    </div>
+        <p>Ronnie Smithey Financial Group is registered to conduct business in all 50 United States. 
+        While we are authorized to provide services nationwide, specific products and strategies may 
+        not be available in all jurisdictions. Not all services are suitable for every investor, 
+        and availability may be subject to state-specific regulations and requirements.</p>
+        <br>
+        <p>Review our <a href="privacypolicy.html" target="_blank" class="privacypolicy-link">Privacy Policy</a></p>
+        </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -63,7 +69,7 @@
         </div>
     </footer>
     
-    <script src="scripts.js"></script>
+    <script src="scripts/index_carousel.js"></script>
       
 </body>
 </html>
